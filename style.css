@@ -1,0 +1,12 @@
+body {
+    background-color: lavender;
+}
+.container {
+    padding-top: 2%;
+    background-color: lightgrey;
+}
+.title {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid purple;
+}
