@@ -43,9 +43,7 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-}
-.button :hover {
-    background-color: darkorange;
+    border-radius: 15px;
 }
 .button-div {
     text-align: center;
