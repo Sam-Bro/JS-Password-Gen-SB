@@ -4,9 +4,50 @@ body {
 .container {
     padding-top: 2%;
     background-color: lightgrey;
+    width: 85%;
+    margin: auto;
+    padding-bottom: 1%;
 }
 .title {
     text-align: center;
     padding-bottom: 10px;
-    border-bottom: 2px solid purple;
+}
+.generator-box {
+    width: 70%; 
+    background-color: white;
+    margin: auto;
+}
+.sub-title {
+    padding: 5% 0 2% 5%;
+    border-bottom: 2px solid grey;
+}
+.pass-hold {
+    text-align: center;
+    padding-top: 1%;
+    border: 2px dashed black;
+    border-radius: 25px;
+    height: 200px;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 2%;
+}
+.pass-div {
+    text-align: center;
+    margin: auto;
+}
+.button {
+    background-color: orange;
+    border: none; 
+    color: white;
+    padding: 15px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.button :hover {
+    background-color: darkorange;
+}
+.button-div {
+    text-align: center;
+    padding-bottom: 20px;
 }
