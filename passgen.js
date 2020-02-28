@@ -13,3 +13,19 @@ const randomFunc = {
     symbol: getRandomSymbol
 };
 
+// user input password length 
+if (characters > 7 && characters < 129) {
+    var userLength = parseInt(characters, 10);
+    console.log(length);
+} else {
+    var userLength = false;
+    alert("invalid password length");
+}
+
+// if input is "yes" return true
+if(upperCase.toLowerCase() === 'yes') {
+    var userUpper = true;
+    console.log("upper: " + userUpper);
+} else {
+    var userUpper = false; 
+}
