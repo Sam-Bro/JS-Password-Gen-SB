@@ -16,7 +16,6 @@ const randomFunc = {
 // user input password length 
 if (characters > 7 && characters < 129) {
     var userLength = parseInt(characters, 10);
-    console.log(length);
 } else {
     var userLength = false;
     alert("invalid password length");
@@ -25,28 +24,24 @@ if (characters > 7 && characters < 129) {
 // if input is "yes" return true
 if(upperCase.toLowerCase() === 'yes') {
     var userUpper = true;
-    console.log("upper: " + userUpper);
 } else {
     var userUpper = false; 
 }
 
 if (lowerCase.toLowerCase() === 'yes') {
     var userLower = true;
-    console.log("lower: " + userLower);
 }else {
     var userLower = false;
 }
 
 if (numbers.toLowerCase() === 'yes') {
     var userNumbers = true;
-    console.log("number: " + userNumbers);
 }else {
     var userNumbers = false;
 }
 
 if (symbols.toLowerCase() === 'yes') {
     var userSymbols = true;
-    console.log("symbol: " + userSymbols);
 }else {
     var userSymbols = false;
 }
@@ -56,15 +51,12 @@ function generatePassword(upper, lower, number, symbol, length) {
     let generatedPassword = '';
     const typesCount = upper + lower + number + symbol;
 
-    //console.log('typesCount ', typesCount);
-
     // filter false inputs
     const typesArr = [{ upper }, { lower }, { number }, { symbol }].filter(filterObj);
     function filterObj(item) {
         return Object.values(item)[0]; 
     }
 
-    //console.log('typesArr: ', typesArr);
 
     if (typesCount === 0) {
         return ' ';
