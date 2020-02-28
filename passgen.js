@@ -62,7 +62,7 @@ function generatePassword(upper, lower, number, symbol, length) {
         return Object.values(item)[0]; 
     }
 
-    console.log('typesArr: ', typesArr);
+    //console.log('typesArr: ', typesArr);
 
     if (typesCount === 0) {
         return ' ';
@@ -76,7 +76,19 @@ function generatePassword(upper, lower, number, symbol, length) {
             generatedPassword += randomFunc[funcName]();
         });
     }
+
 }
+
+generate.addEventListener('click', function() {
+    const length = characters;
+    const hasUpper = userUpper;
+    const hasLower = userLower;
+    const hasNumber = userNumbers;
+    const hasSymbol = userSymbols;
+
+    console.log(hasSymbol);
+    result.innerText = generatePassword(hasUpper, hasLower, hasNumber, hasSymbol, length);
+});
 
 //Password generator random character functions 
 
