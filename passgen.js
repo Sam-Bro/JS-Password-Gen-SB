@@ -29,3 +29,24 @@ if(upperCase.toLowerCase() === 'yes') {
 } else {
     var userUpper = false; 
 }
+
+if (lowerCase.toLowerCase() === 'yes') {
+    var userLower = true;
+    console.log("lower: " + userLower);
+}else {
+    var userLower = false;
+}
+
+if (numbers.toLowerCase() === 'yes') {
+    var userNumbers = true;
+    console.log("number: " + userNumbers);
+}else {
+    var userNumbers = false;
+}
+
+if (symbols.toLowerCase() === 'yes') {
+    var userSymbols = true;
+    console.log("symbol: " + userSymbols);
+}else {
+    var userSymbols = false;
+}
