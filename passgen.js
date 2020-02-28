@@ -1,6 +1,6 @@
 //variables and prompts
 const results = document.getElementById("result");
-var characters = prompt("How many characters should the password be? (8-128)");
+var characters = prompt("How many characters the password be? (8-128)");
 var upperCase = prompt("Should the password contain uppercase letters? (yes / no)");
 var lowerCase = prompt("Should the password contain lowercase letters? (yes / no)");
 var numbers = prompt("Should the password contain numbers? (yes / no)");
@@ -68,7 +68,14 @@ function generatePassword(upper, lower, number, symbol, length) {
         return ' ';
     }
 
+    for (let i = 0; i < length; i += typesCount) {
+        typesArr.forEach(function(type) {
+            const funcName = Object.keys(type)[0];
+            //console.log('funcName', funcName);
 
+            generatedPassword += randomFunc[funcName]();
+        });
+    }
 }
 
 //Password generator random character functions 
