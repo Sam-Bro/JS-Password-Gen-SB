@@ -11,18 +11,22 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-        <div class="container">
-            <h1 class="title">Password Generator</h1>
-            <div class="generator-box">
+        <main class="container">
+            <header>
+                <h1 class="title">Password Generator</h1>
+            </header>
+    
+            <section class="generator-box">
                 <h2 class="sub-title">Generate a Password</h2>
-                <div class="pass-div">
-                    <h3 class="pass-hold">Your secure Password</h3>
+                <div class="pass-div pass-hold">
+                    <h3>Your secure Password</h3>
+                    <span id="result"></span>
                 </div>
-                <div class="button-div">
-                    <a href="#" class="button">Generate</a>
-                </div>
-            </div>
-        </div>
+                <section class="button-div">
+                    <button href="#" class="button" id="generate">Generate</button>
+                </section>
+            </section>
+        </main>
         <script src="passgen.js"></script>
 </body>
 </html>
