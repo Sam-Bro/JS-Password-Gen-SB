@@ -51,6 +51,10 @@ if (symbols.toLowerCase() === 'yes') {
     var userSymbols = false;
 }
 
+function generatePassword(upper, lower, number, symbol, length) {
+    
+}
+
 //Password generator random character functions 
 
 function getRandomLower() {
