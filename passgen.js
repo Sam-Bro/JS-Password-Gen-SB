@@ -55,11 +55,17 @@ function generatePassword(upper, lower, number, symbol, length) {
     let generatedPassword = '';
     const typesCount = upper + lower + number + symbol;
 
-    console.log('typesCount ', typesCount);
+    //console.log('typesCount ', typesCount);
 
     const typesArr = [{ upper }, { lower }, { number }, { symbol }].filter(filterObj);
     function filterObj(item) {
         return Object.values(item)[0]; 
+    }
+
+    console.log('typesArr: ', typesArr);
+
+    if (typesCount === 0) {
+        return ' ';
     }
 
 
