@@ -51,12 +51,14 @@ if (symbols.toLowerCase() === 'yes') {
     var userSymbols = false;
 }
 
+// function to generate password
 function generatePassword(upper, lower, number, symbol, length) {
     let generatedPassword = '';
     const typesCount = upper + lower + number + symbol;
 
     //console.log('typesCount ', typesCount);
 
+    // filter false inputs
     const typesArr = [{ upper }, { lower }, { number }, { symbol }].filter(filterObj);
     function filterObj(item) {
         return Object.values(item)[0]; 
@@ -81,6 +83,7 @@ function generatePassword(upper, lower, number, symbol, length) {
     return finalPassword;
 }
 
+//password generator button click statement 
 generate.addEventListener('click', function() {
     const length = characters;
     const hasUpper = userUpper;
