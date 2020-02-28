@@ -6,3 +6,10 @@ var lowerCase = prompt("Should the password contain lowercase letters? (yes / no
 var numbers = prompt("Should the password contain numbers? (yes / no)");
 var symbols = prompt("Should the password contain symbols? (yes / no)")
 
+const randomFunc = {
+    lower: getRandomLower,
+    upper: getRandomUpper,
+    number: getRandomNumber,
+    symbol: getRandomSymbol
+};
+
