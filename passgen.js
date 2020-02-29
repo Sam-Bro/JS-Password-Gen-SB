@@ -11,14 +11,46 @@ const randomFunc = {
 };
 
 //password generator button click statement 
-generate.addEventListener('click', function() {
+generate.addEventListener('click', function () {
     var characters = prompt("How many characters should the password containt (8-128)");
     var upperCase = prompt("Should the password contain uppercase Letters?");
     var lowerCase = prompt("Should the password contain lowercase Letters");
     var numbers = prompt("Should the password contain numbers?");
     var symbols = prompt("Should the password contain symbols?");
 
-    
+
+    // user input password length 
+    if (characters > 7 && characters < 129) {
+        var userLength = parseInt(characters, 10);
+    } else {
+        var userLength = false;
+        alert("invalid password length");
+    }
+
+    // if input is "yes" return true
+    if (upperCase.toLowerCase() === 'yes') {
+        var userUpper = true;
+    } else {
+        var userUpper = false;
+    }
+
+    if (lowerCase.toLowerCase() === 'yes') {
+        var userLower = true;
+    } else {
+        var userLower = false;
+    }
+
+    if (numbers.toLowerCase() === 'yes') {
+        var userNumbers = true;
+    } else {
+        var userNumbers = false;
+    }
+
+    if (symbols.toLowerCase() === 'yes') {
+        var userSymbols = true;
+    } else {
+        var userSymbols = false;
+    }
 
     const length = characters;
     const hasUpper = userUpper;
@@ -30,38 +62,6 @@ generate.addEventListener('click', function() {
     result.innerText = generatePassword(hasUpper, hasLower, hasNumber, hasSymbol, length);
 });
 
-// user input password length 
-if (characters > 7 && characters < 129) {
-    var userLength = parseInt(characters, 10);
-} else {
-    var userLength = false;
-    alert("invalid password length");
-}
-
-// if input is "yes" return true
-if(upperCase.toLowerCase() === 'yes') {
-    var userUpper = true;
-} else {
-    var userUpper = false; 
-}
-
-if (lowerCase.toLowerCase() === 'yes') {
-    var userLower = true;
-}else {
-    var userLower = false;
-}
-
-if (numbers.toLowerCase() === 'yes') {
-    var userNumbers = true;
-}else {
-    var userNumbers = false;
-}
-
-if (symbols.toLowerCase() === 'yes') {
-    var userSymbols = true;
-}else {
-    var userSymbols = false;
-}
 
 // function to generate password
 function generatePassword(upper, lower, number, symbol, length) {
@@ -71,7 +71,7 @@ function generatePassword(upper, lower, number, symbol, length) {
     // filter false inputs
     const typesArr = [{ upper }, { lower }, { number }, { symbol }].filter(filterObj);
     function filterObj(item) {
-        return Object.values(item)[0]; 
+        return Object.values(item)[0];
     }
 
 
@@ -80,7 +80,7 @@ function generatePassword(upper, lower, number, symbol, length) {
     }
 
     for (let i = 0; i < length; i += typesCount) {
-        typesArr.forEach(function(type) {
+        typesArr.forEach(function (type) {
             const funcName = Object.keys(type)[0];
             //console.log('funcName', funcName);
 
