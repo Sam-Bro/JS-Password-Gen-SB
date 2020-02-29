@@ -1,6 +1,8 @@
+/*change background colour */
 body {
     background-color: lavender;
 }
+/*main container */
 .container {
     padding-top: 2%;
     background-color: #ADD8E6;
@@ -8,11 +10,14 @@ body {
     margin: auto;
     padding-bottom: 5%;
     border-radius: 15px;
+    min-width: 400px;
 }
+/*title text */
 .title {
     text-align: center;
     padding-bottom: 10px;
 }
+/* password generator box */
 .generator-box {
     width: 70%; 
     background-color: white;
@@ -22,6 +27,7 @@ body {
     padding: 5% 0 2% 5%;
     border-bottom: 2px solid grey;
 }
+/*password output div styles */
 .pass-hold {
     text-align: center;
     padding-top: 1%;
@@ -36,6 +42,7 @@ body {
     text-align: center;
     margin: auto;
 }
+/* generate button styles */
 .button {
     background-color: #6200EE;
     border: none; 
@@ -51,10 +58,12 @@ body {
     text-align: center;
     padding-bottom: 10px;
 }
+/* output styles */
 .result {
     background-color: lavender;
-    margin-bottom: 20%;
+    overflow-wrap: break-word;
 }
+/*copy button styles */
 .button-copy {
     background-color: grey;
     border: none; 
@@ -64,4 +73,11 @@ body {
     text-decoration: none;
     display: inline-block;
     border-radius: 5px;
+}
+
+/* extend password box height when window is under 1000px*/
+@media only screen and (max-width: 1000px) {
+    .pass-hold {
+        height: 250px;
+    }
 }
