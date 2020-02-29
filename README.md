@@ -6,6 +6,7 @@ Unit 03 Javascript Homework, creating a JavaScript password generator. This proj
 project is to run in the browser and feature dynamically updated HTML and CSS powered by Javascript code. This project will also feature a polished user interface and adapt to multiple screen sizes.
 
 This project required a responsive website to output a random password based on user input, the user will have an option of:
+
     - number of characters the password will contain (8-128)
 
     -inclusion of upper case letters in the password output
