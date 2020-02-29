@@ -1,11 +1,7 @@
 //variables and prompts
 const result = document.getElementById("result");
 const generate = document.getElementById("generate");
-var characters = prompt("How many characters should the password containt (8-128)");
-var upperCase = prompt("Should the password contain uppercase Letters?");
-var lowerCase = prompt("Should the password contain lowercase Letters");
-var numbers = prompt("Should the password contain numbers?");
-var symbols = prompt("Should the password contain symbols?");
+
 
 const randomFunc = {
     lower: getRandomLower,
@@ -13,6 +9,26 @@ const randomFunc = {
     number: getRandomNumber,
     symbol: getRandomSymbol
 };
+
+//password generator button click statement 
+generate.addEventListener('click', function() {
+    var characters = prompt("How many characters should the password containt (8-128)");
+    var upperCase = prompt("Should the password contain uppercase Letters?");
+    var lowerCase = prompt("Should the password contain lowercase Letters");
+    var numbers = prompt("Should the password contain numbers?");
+    var symbols = prompt("Should the password contain symbols?");
+
+    
+
+    const length = characters;
+    const hasUpper = userUpper;
+    const hasLower = userLower;
+    const hasNumber = userNumbers;
+    const hasSymbol = userSymbols;
+
+    console.log(hasSymbol);
+    result.innerText = generatePassword(hasUpper, hasLower, hasNumber, hasSymbol, length);
+});
 
 // user input password length 
 if (characters > 7 && characters < 129) {
@@ -75,19 +91,6 @@ function generatePassword(upper, lower, number, symbol, length) {
 
     return finalPassword;
 }
-
-//password generator button click statement 
-generate.addEventListener('click', function() {
-
-    const length = characters;
-    const hasUpper = userUpper;
-    const hasLower = userLower;
-    const hasNumber = userNumbers;
-    const hasSymbol = userSymbols;
-
-    console.log(hasSymbol);
-    result.innerText = generatePassword(hasUpper, hasLower, hasNumber, hasSymbol, length);
-});
 
 //Password generator random character functions 
 
