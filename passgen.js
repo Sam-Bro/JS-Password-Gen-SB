@@ -1,7 +1,7 @@
 //variables and prompts
 const result = document.getElementById("result");
 const generate = document.getElementById("generate");
-
+const copyPass = document.getElementById("pass");
 
 const randomFunc = {
     lower: getRandomLower,
@@ -9,6 +9,23 @@ const randomFunc = {
     number: getRandomNumber,
     symbol: getRandomSymbol
 };
+
+//Copy password to clipboard
+copyPass.addEventListener('click', function () {
+    const textarea = document.createElement('textarea');
+    const password = result.innerText;
+
+    if (!password) {
+        return;
+    }
+
+    textarea.value = password;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+    alert("password copied to clipboard");
+});
 
 //password generator button click statement 
 generate.addEventListener('click', function () {
