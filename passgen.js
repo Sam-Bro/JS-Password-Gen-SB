@@ -10,30 +10,11 @@ const randomFunc = {
     symbol: getRandomSymbol
 };
 
-//Copy password to clipboard
-copyPass.addEventListener('click', function () {
-    const textarea = document.createElement('textarea');
-    const password = result.innerText;
-
-    if (!password) {
-        return;
-    }
-
-    textarea.value = password;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    textarea.remove();
-    alert("password copied to clipboard");
-});
 
 //password generator button click statement 
 generate.addEventListener('click', function () {
     var characters = prompt("How many characters should the password containt (8-128)");
-    var upperCase = prompt("Should the password contain uppercase Letters?");
-    var lowerCase = prompt("Should the password contain lowercase Letters");
-    var numbers = prompt("Should the password contain numbers?");
-    var symbols = prompt("Should the password contain symbols?");
+
 
 
     // user input password length 
@@ -42,7 +23,13 @@ generate.addEventListener('click', function () {
     } else {
         var userLength = false;
         alert("invalid password length");
+        return;
     }
+    
+    var upperCase = prompt("Should the password contain uppercase Letters?");
+    var lowerCase = prompt("Should the password contain lowercase Letters");
+    var numbers = prompt("Should the password contain numbers?");
+    var symbols = prompt("Should the password contain symbols?");
 
     // if input is "yes" return true
     if (upperCase.toLowerCase() === 'yes') {
@@ -124,3 +111,20 @@ function getRandomSymbol() {
     const symbols = "!@#$%^&*()<>?,."
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
+
+//Copy password to clipboard
+copyPass.addEventListener('click', function () {
+    const textarea = document.createElement('textarea');
+    const password = result.innerText;
+
+    if (!password) {
+        return;
+    }
+
+    textarea.value = password;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+    alert("password copied to clipboard");
+});
