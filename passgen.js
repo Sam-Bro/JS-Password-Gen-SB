@@ -63,6 +63,7 @@ generate.addEventListener('click', function () {
 });
 
 
+
 // function to generate password
 function generatePassword(upper, lower, number, symbol, length) {
     let generatedPassword = '';
