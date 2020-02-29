@@ -17,6 +17,12 @@ body {
     text-align: center;
     padding-bottom: 10px;
 }
+/*paragraph styles */
+.instruct {
+    padding-left: 5%;
+    padding-bottom: 1%;
+    border-bottom: 2px solid grey;
+}
 /* password generator box */
 .generator-box {
     width: 70%; 
@@ -24,8 +30,8 @@ body {
     margin: auto;
 }
 .sub-title {
-    padding: 5% 0 2% 5%;
-    border-bottom: 2px solid grey;
+    padding-top: 5%;
+    padding-left: 5%;
 }
 /*password output div styles */
 .pass-hold {

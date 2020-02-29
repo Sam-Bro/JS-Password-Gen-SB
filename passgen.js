@@ -75,7 +75,6 @@ generate.addEventListener('click', function () {
     const hasNumber = userNumbers;
     const hasSymbol = userSymbols;
 
-    console.log(hasSymbol);
     result.innerText = generatePassword(hasUpper, hasLower, hasNumber, hasSymbol, length);
 });
 
@@ -100,7 +99,6 @@ function generatePassword(upper, lower, number, symbol, length) {
     for (let i = 0; i < length; i += typesCount) {
         typesArr.forEach(function (type) {
             const funcName = Object.keys(type)[0];
-            //console.log('funcName', funcName);
 
             generatedPassword += randomFunc[funcName]();
         });
