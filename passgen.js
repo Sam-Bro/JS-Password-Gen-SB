@@ -1,10 +1,6 @@
 //variables and prompts
 const results = document.getElementById("result");
-var characters = prompt("How many characters the password be? (8-128)");
-var upperCase = prompt("Should the password contain uppercase letters? (yes / no)");
-var lowerCase = prompt("Should the password contain lowercase letters? (yes / no)");
-var numbers = prompt("Should the password contain numbers? (yes / no)");
-var symbols = prompt("Should the password contain symbols? (yes / no)")
+
 
 const randomFunc = {
     lower: getRandomLower,
@@ -19,6 +15,7 @@ if (characters > 7 && characters < 129) {
 } else {
     var userLength = false;
     alert("invalid password length");
+    return;
 }
 
 // if input is "yes" return true
@@ -77,6 +74,7 @@ function generatePassword(upper, lower, number, symbol, length) {
 
 //password generator button click statement 
 generate.addEventListener('click', function() {
+
     const length = characters;
     const hasUpper = userUpper;
     const hasLower = userLower;
