@@ -18,3 +18,5 @@ This project required a responsive website to output a random password based on 
     -Inclusion of symbols in the password output
 
 This projects purpose was to demonstrate the use of JavaScript to print a random password string based on user input while maintaining a functional and responsive design. 
+
+https://sam-bro.github.io/JS-Password-Gen-SB/ 
